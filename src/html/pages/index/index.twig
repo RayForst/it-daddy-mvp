@@ -1,0 +1,18 @@
+{% extends "_layout.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="css/index.css">
+{% endblock %}
+
+{% block content %}
+    <h3>Components</h3>
+
+    {% include "pages/build-features/_css-features.twig" %}
+    {% include "pages/build-features/_html-features.twig" %}
+    {% include "pages/build-features/_assets-features.twig" %}
+    {% include "pages/build-features/_other-features.twig" %}
+{% endblock %}
+
+{% block js %}
+    <script src="js/index.js?v=4"></script>
+{% endblock %}
