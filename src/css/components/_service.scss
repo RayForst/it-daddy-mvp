@@ -1,0 +1,39 @@
+.d-service-text {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.61em;
+  letter-spacing: normal;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  max-width: 756px;
+}
+
+.d-service-ca {
+  border-top: solid 1px #353535;
+  border-bottom: solid 1px #353535;
+
+  .title {
+    font-family: "Varela Round", sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.36em;
+    letter-spacing: normal;
+    color: #00e676;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.61em;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+}

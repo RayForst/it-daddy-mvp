@@ -28,4 +28,4 @@ IMAGES & SVG - Imagemin, InjectSVG,[Retina Js](https://www.npmjs.com/package/ret
 * Base64 for SVG in css
 * Linting
 * Text from .json
-* Best setup for html-minifier
+* Best setup for html-minifier# it-daddy-mvp

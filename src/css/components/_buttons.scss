@@ -1,0 +1,69 @@
+.d-btn {
+  display: inline-flex;
+  line-height: 1em;
+  font-family: "Varela Round", sans-serif;
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+.d-btn:hover {
+  box-shadow: inset 0 0 0 2em #cb72aa;
+  text-decoration: none !important;
+}
+
+.d-btn.d-btn-regular {
+  border-radius: 26px;
+  background-color: #00e676;
+  border-color: #00e676;
+  color: #000000;
+  font-family: "Varela Round", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  min-width: 210px;
+  justify-content: center;
+  padding: 16px 25px;
+}
+.d-btn.d-btn-regular:hover {
+  box-shadow: inset 0 0 0 2em #0da55b;
+}
+
+.d-btn.d-btn-border {
+  border-radius: 21px;
+  font-size: 16px;
+  border: solid 2px #00e676;
+  padding: 12px 38px 10px 38px !important;
+
+  &:hover {
+    box-shadow: inset 0 0 0 2em #0da55b;
+    border-color: #0da55b;
+  }
+}
+
+.d-btn.d-btn-border-bot {
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  color: #00e676;
+  padding: 15px 39px;
+  position: relative;
+}
+
+.d-btn.d-btn-border-bot::after {
+  height: 4px;
+  border-radius: 15px;
+  background-color: #00e676;
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.d-btn.d-btn-border-bot:hover {
+  box-shadow: inset 0 0 0 2em #00e676;
+  color: #000 !important;
+}

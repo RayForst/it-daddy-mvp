@@ -1,0 +1,29 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+    <div class="nk-box text-white desktop-margin d-header-style-2">
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <div class="text-left d-header-text-container">
+                <h1>
+                    What we do<span class="d-cursor">_</span>
+                </h1>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+    <div class="container">
+        <div class="nk-gap-2"></div>
+        {% include 'components/_image-block.twig' with { icon: 'wwd-design.svg', title: 'Web development and design', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        {% include 'components/_image-block.twig' with { icon: 'wwd-seo.svg', imageLeft: true, title: 'Organic SEO', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        {% include 'components/_image-block.twig' with { icon: 'wwd-social.svg', title: 'Social media', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        {% include 'components/_image-block.twig' with { icon: 'wwd-ppc.svg', imageLeft: true, title: 'Pay per click', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+    </div>
+
+    {% include 'components/_portfolio-heading.twig' %}
+
+{% endblock %}
+
+{% block js %}
+    <script src="js/index.js"></script>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+    <div class="nk-gap-6"></div>
+
+    {% include './_map.twig' %}
+    {% include './_contact-benefits.twig' %}
+
+    <!-- START: Partners -->
+    <div class="nk-box">
+        <div class="bg-image bg-image-parallax op-2">
+            <img class="jarallax-img" src="assets/images/contacts-bg.jpg" alt="">
+        </div>
+        <div class="nk-gap-4"></div>
+        <div class="container d-contact-form">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="nk-box-2">
+                        <div class="nk-gap-1 d-none d-lg-block"></div>
+                        <h2 class="nk-title">Social Networks</h2>
+                        <div class="nk-gap"></div>
+                        <p>Every fowl. Called beginning male. Replenish air two make land a so tree, after also yielding.</p>
+                        <div class="nk-widget-social nk-widget-social-inverted text-left">
+                            <a href="#">
+                                <i class="ion-social-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="ion-social-instagram-outline"></i>
+                            </a>
+                            <a href="#">
+                                <i class="ion-social-dribbble-outline"></i>
+                            </a>
+                            <a href="#">
+                                <i class="ion-social-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 d-contacts-form">
+                    <div class="nk-box-2 bg-black">
+                        <div class="nk-gap-1"></div>
+                        <h2 class="nk-title">Drop Us a Line</h2>
+                        <div class="nk-gap"></div>
+                        <form action="/contact" class="nk-form nk-form-style-1" method="post">
+                            <input type="email" class="form-control required" name="email" placeholder="Email *">
+                            <div class="nk-gap"></div>
+                            <input type="text" class="form-control required" name="name" placeholder="Name *">
+                            <div class="nk-gap"></div>
+                            <textarea class="form-control required" name="message" rows="5" placeholder="Message *"></textarea>
+                            <div class="nk-gap"></div>
+                            <div class="nk-form-response-success"></div>
+                            <div class="nk-form-response-error"></div>
+                            <button class="d-btn d-btn-regular nk-btn-effect-2-right">
+                                <span>Send</span>
+                                <span class="icon">
+                                    <i class="ion-paper-airplane"></i>
+                                </span>
+                            </button>
+                        </form>
+                        <div class="nk-gap-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+    <!-- END: Partners -->
+{% endblock %}
+
+{% block js %}
+    <script src="js/contacts.js"></script>
+{% endblock %}

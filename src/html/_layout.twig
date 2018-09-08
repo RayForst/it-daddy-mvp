@@ -1,28 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Description" content="Boilerplate">
-        <meta name="Keywords" content="Boilerplate">
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="css/layout.css?v=4">
-        {% block css %}{% endblock %}
-        <title>Boilerplate</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>IT daddy</title>
+
+        {# <meta name="description" content="Description">
+        <meta name="keywords" content="HTML5 template, responsive, Bootstrap 4, premium, template"> #}
+        <meta name="author" content="Sergey Kolpakov">
+
+        {# <link rel="icon" type="image/png" href="assets/images/favicon.png"> #}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/layout.css">
     </head>
+
     <body>
-        <div class="content">
-            <h1>// DoubleFront boilerplate v0.1</h1>
+        {% set address = '422 Richards St, Suite 170, Vancouver BC V6B 2 Z4, Canada' %}
+        <header class="nk-header dad-header">
+            <nav class="nk-navbar nk-navbar-top dad-header{% block headerCss %}{% endblock %}">
+                {% include 'components/_header.twig' %}
+            </nav>
+        </header>
+        {% include 'components/_mobile-nav.twig' %}
+
+        <div class="nk-main">
+            <div class="d-bg daddy-bg daddy-bg--top" data-d-empty="700" data-d="1000">
+                <div class="daddy-bg-viewport"></div>
+            </div>
 
             {% block content %}{% endblock %}
+            {% include 'components/_footer.twig' %}
+
+            <div class="d-bg daddy-bg daddy-bg--bottom" data-d-empty="700" data-d="1000">
+                <div class="daddy-bg-viewport"></div>
+            </div>
         </div>
 
-        {% block footer %}
-            {% include "components/_footer.twig" %}
-        {% endblock %}
+        {% include 'components/_back-to-top.twig' %}
 
-        <script src="js/common-chunk.js?v=4"></script>
+        <!-- START: Scripts -->
+        {#
+    
+
+        <!-- Jquery Countdown + Moment -->
+        <script src="assets/vendor/jquery-countdown/dist/jquery.countdown.min.js "></script>
+        <script src="assets/vendor/moment/min/moment.min.js "></script>
+        <script src="assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js "></script>
+
+    
+        #}
+        <!-- END: Scripts -->
+
+        <script src="js/common-chunk.js"></script>
         {% block js %}{% endblock %}
     </body>
 </html>
