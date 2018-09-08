@@ -1,9 +1,12 @@
 const express = require('express')
 const bodyPsarer = require('body-parser')
+const robots = require('express-robots')
 
 const app = express()
 const htmlPath = `${__dirname}/static/`
 const urlencodedParser = bodyPsarer.urlencoded({ extended: false })
+
+app.use(robots({ UserAgent: '*', Disallow: '/' }))
 
 app.get('/', (req, res) => {
   res.sendFile(`${htmlPath}/index.html`)
