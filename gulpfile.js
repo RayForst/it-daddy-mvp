@@ -89,6 +89,7 @@ gulp.task(
   'dev',
   gulp.series(
     'clean',
+    'images',
     'fonts',
     'video',
     'css',

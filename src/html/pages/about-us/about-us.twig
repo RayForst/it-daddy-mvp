@@ -1,120 +1,24 @@
 {% extends "_layout.twig" %}
 
 {% block content %}
-    <div class="nk-box bg-dark-1 text-white desktop-margin d-header-style-2" style="background-image: url('assets/images/our-work-header.jpg');">
+    <div class="nk-box text-white desktop-margin d-header-style-2">
         <div class="nk-gap-4"></div>
         <div class="container">
-            <div class="text-center">
-                <h3 class="nk-title-back">Night Lesser Hath</h3>
-                <h2 class="nk-title h1">Image whales their called</h2>
-                <div class="nk-title-sep-icon">
-                    <span class="icon">
-                        <span class="ion-fireball"></span></span>
-                </div>
+            <div class="text-left d-header-text-container">
+                <h1>
+                    About us<span class="d-cursor">_</span>
+                </h1>
             </div>
         </div>
         <div class="nk-gap-4"></div>
     </div>
-
-    <div class="nk-gap-3"></div>
-
-    {% include 'components/_image-block.twig' %}
-    {% include 'components/_image-block.twig' with {imageLeft: true }%}
-
-    <!-- START: Image Block 5 -->
-    <div class="nk-box">
-        <div class="bg-image-row row">
-            <div class="col-lg-5 offset-lg-6" style="max-width: 475px;">
-                <div class="nk-gap-5"></div>
-                <div class="nk-progress nk-count" data-progress="91" data-progress-mask="{$}%">
-                    <div class="nk-progress-title">JavaScript</div>
-                    <div class="nk-progress-line">
-                        <div style="width: 91%">
-                            <div class="nk-progress-percent">91%</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nk-progress nk-count" data-progress="72" data-progress-mask="{$}%">
-                    <div class="nk-progress-title">PHP</div>
-                    <div class="nk-progress-line">
-                        <div style="width: 72%">
-                            <div class="nk-progress-percent">72%</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nk-progress nk-count" data-progress="86" data-progress-mask="{$}%">
-                    <div class="nk-progress-title">Photoshop</div>
-                    <div class="nk-progress-line">
-                        <div style="width: 86%">
-                            <div class="nk-progress-percent">86%</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nk-progress nk-count" data-progress="43" data-progress-mask="{$}%">
-                    <div class="nk-progress-title">Paint</div>
-                    <div class="nk-progress-line">
-                        <div style="width: 43%">
-                            <div class="nk-progress-percent">43%</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="nk-gap-5"></div>
-                    <h2 class="h1 nk-title">Side Images</h2>
-                    <div class="nk-gap"></div>
-                    <p>Darkness divided first subdue which lesser third called. Morning blessed evening had make forth which. You beast his spirit male one and bring greater
-                        <strong>appear</strong>
-                        give fifth give i. Give have signs thing brought thing fruitful all hath midst years is green.</p>
-
-                    <div class="nk-gap-5"></div>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <div class="nk-gap-2"></div>
+        {% include 'components/_image-block.twig' with { icon: 'wwd-design.svg', title: 'Web development and design', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        {% include 'components/_image-block.twig' with { icon: 'wwd-seo.svg', imageLeft: true, title: 'Organic SEO', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        {% include 'components/_image-block.twig' with { icon: 'wwd-social.svg', title: 'Social media', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        {% include 'components/_image-block.twig' with { icon: 'wwd-ppc.svg', imageLeft: true, title: 'Pay per click', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
     </div>
-    <!-- END: Image Block 5 -->
-
-    <!-- START: Features -->
-    <div class="nk-box bg-gray-2">
-        <div class="nk-gap-4"></div>
-        <div class="container">
-            <div class="row vertical-gap">
-                <div class="col-md-3 col-sm-6">
-                    <div class="nk-counter-2">
-                        <div class="nk-count">4</div>
-                        <h3 class="nk-counter-title h4">Team Members</h3>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="nk-counter-2">
-                        <div class="nk-count">16</div>
-                        <h3 class="nk-counter-title h4">Themes</h3>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="nk-counter-2">
-                        <div class="nk-count">3600</div>
-                        <h3 class="nk-counter-title h4">Happy Clients</h3>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="nk-counter-2">
-                        <div class="nk-count">18</div>
-                        <h3 class="nk-counter-title h4">Awards Won</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="nk-gap-4"></div>
-    </div>
-    <!-- END: Features -->
 
     <!-- START: Members -->
     <div class="nk-box">
@@ -123,7 +27,6 @@
             <div class="row vertical-gap">
                 <div class="col-md-6 col-lg-3">
                     <div class="nk-image-box-1">
-                        <a href="page-about-me.html" class="nk-image-box-link"></a>
                         <img src="assets/images/team-member-1.jpg" alt="">
                     </div>
                     <div class="nk-gap"></div>
@@ -132,7 +35,6 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="nk-image-box-1">
-                        <a href="page-about-me.html" class="nk-image-box-link"></a>
                         <img src="assets/images/team-member-2.jpg" alt="">
                     </div>
                     <div class="nk-gap"></div>
@@ -141,7 +43,6 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="nk-image-box-1">
-                        <a href="page-about-me.html" class="nk-image-box-link"></a>
                         <img src="assets/images/team-member-3.jpg" alt="">
                     </div>
                     <div class="nk-gap"></div>
@@ -150,7 +51,6 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="nk-image-box-1">
-                        <a href="page-about-me.html" class="nk-image-box-link"></a>
                         <img src="assets/images/team-member-4.jpg" alt="">
                     </div>
                     <div class="nk-gap"></div>
@@ -163,78 +63,8 @@
     </div>
     <!-- END: Members -->
 
-    <!-- START: Partners -->
-    <div class="nk-box text-center d-partners-list">
-        <div class="nk-gap-4"></div>
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-lg-4 col-md-6">
-                    <div class="nk-box-2 nk-box-line">
-                        <a href="#"><img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img" width="200"></a>
+    {% include 'components/_call-to-action-2.twig' %}
 
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="nk-box-2 nk-box-line">
-                        <a href="#"><img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img" width="200"></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="nk-box-2 nk-box-line">
-                        <a href="#"><img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img" width="200"></a>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="nk-box-2 nk-box-line">
-                        <a href="#"><img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img" width="200"></a>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="nk-box-2 nk-box-line">
-                        <a href="#"><img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img" width="200"></a>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="nk-box-2 nk-box-line">
-                        <a href="#"><img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img" width="200"></a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="nk-gap-4"></div>
-    </div>
-    <!-- END: Partners -->
-
-    <!-- START: Image Block 7 -->
-    <div class="nk-box text-center">
-        <div class="nk-gap-5"></div>
-        <img src="assets/images/mock-imac-1.jpg" class="nk-img" alt="">
-        <div class="nk-gap-2"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <h2 class="h1 nk-title">The New Era of a Responsive Websites</h2>
-                    <h3 class="nk-sub-title">The first template, that work with side navigations as native applications.</h3>
-                    <div class="nk-gap"></div>
-                    <p>Subdue. Whales evening. Saw heaven seed Doesn&#39;t i third tree open created were our set signs multiply. Bearing their fifth behold herb. Forth god called which moving two, that spirit i to you&#39;re fly behold likeness set and gathering in.</p>
-                    <br>
-                    <a href="#!" class="nk-btn nk-btn-x2 nk-btn-effect-5-left nk-btn-color-main-1">
-                        <span class="icon">
-                            <i class="ion-bag"></i>
-                        </span>
-                        Purchase Now
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="nk-gap-5"></div>
-    </div>
-    <!-- END: Image Block 7 -->
 {% endblock %}
 
 {% block js %}

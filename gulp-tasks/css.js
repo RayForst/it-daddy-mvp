@@ -1,4 +1,6 @@
 module.exports = function(gulp, plugins, options) {
+  console.log('css')
+
   return plugins
     .multipipe(
       gulp.src(options.src, {}),

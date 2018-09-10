@@ -43,9 +43,12 @@
     "gulp-webpack": "^1.5.0",
     "http": "^0.0.0",
     "imagemin-pngquant": "^5.0.1",
+    "isotope-layout": "^3.0.6",
+    "isotope-packery": "^2.0.1",
     "jquery": "^3.3.1",
     "jquery-bridget": "^2.0.1",
     "multipipe": "^2.0.1",
+    "nodemailer": "^4.6.8",
     "normalize-scss": "^7.0.1",
     "popper.js": "^1.14.4",
     "reset-css": "^2.2.1",
@@ -53,6 +56,7 @@
     "typed.js": "^2.0.9",
     "url": "^0.11.0",
     "webpack": "^3.11.0",
-    "webpack-stream": "^4.0.1"
+    "webpack-stream": "^4.0.1",
+    "xoauth2": "^1.2.0"
   }
 }

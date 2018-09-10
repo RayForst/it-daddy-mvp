@@ -2,7 +2,6 @@ import Flickity from 'flickity';
 import jQueryBridget from 'jquery-bridget'
 
 jQueryBridget( 'flickity', Flickity, $ );
-console.log('hello');
 /*!-----------------------------------------------------------------
     Name: Khaki - HTML Multipurpose Bootstrap 4 Template
     Version: 1.5.0
@@ -4009,7 +4008,8 @@ function initForms() {
                 (0, _utility.$)(form).ajaxSubmit({
                     type: 'POST',
                     success: function success(response) {
-                        response = JSON.parse(response);
+                        console.log('response', response);
+
                         if (response.type && response.type === 'success') {
                             $responseError.hide();
                             $responseSuccess.html(response.response).show();
@@ -5731,7 +5731,6 @@ function noClickEventOnDrag($carousel) {
 
 /* Flickity */
 function initPluginFlickity() {
-    console.log('init flick')
     // if (typeof window.Flickity === 'undefined') {
     //     return;
     // }
@@ -5790,7 +5789,6 @@ function initPluginFlickity() {
     }
 
     // carousel 2
-    console.log('here we go');
     $('.nk-carousel-2 > .nk-carousel-inner:not(.flickity-enabled)').each(function eachCarouselInner() {
         $(this).flickity({
             pageDots: (0, _utility.$)(this).parent().attr('data-dots') === 'true' || false,

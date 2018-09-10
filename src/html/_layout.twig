@@ -18,7 +18,7 @@
         <link href="https://fonts.googleapis.com/css?family=Varela+Round&amp;subset=latin-ext" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="/css/layout.css">
     </head>
 
     <body>
@@ -31,14 +31,14 @@
         {% include 'components/_mobile-nav.twig' %}
 
         <div class="nk-main">
-            <div class="d-bg daddy-bg daddy-bg--top" data-d-empty="700" data-d="1000">
+            <div class="d-bg daddy-bg daddy-bg--top" data-d-empty="13" data-d="8">
                 <div class="daddy-bg-viewport"></div>
             </div>
 
             {% block content %}{% endblock %}
             {% include 'components/_footer.twig' %}
 
-            <div class="d-bg daddy-bg daddy-bg--bottom" data-d-empty="700" data-d="1000">
+            <div class="d-bg daddy-bg daddy-bg--bottom" data-d-empty="13" data-d="8">
                 <div class="daddy-bg-viewport"></div>
             </div>
         </div>
@@ -58,7 +58,7 @@
         #}
         <!-- END: Scripts -->
 
-        <script src="js/common-chunk.js"></script>
+        <script src="/js/common-chunk.js"></script>
         {% block js %}{% endblock %}
     </body>
 </html>

@@ -379,10 +379,10 @@
 
 .d-custom-bg .d-custom-bg-viewport {
   position: absolute;
-  width: 547px;
-  height: 442px;
-  top: 0;
-  right: 0;
+  width: 120%;
+  height: 140%;
+  top: -20%;
+  right: -20%;
   z-index: -1;
 }
 
@@ -441,26 +441,36 @@
 .ratio1_2:before {
   margin-top: 200%;
 }
-.ratio4_3:before {
-  margin-top: 75%;
-}
-.ratio16_9:before {
-  margin-top: 56.25%;
-}
 
-.d-portfolio .nk-portfolio-item:not(:hover):not(.d-no-grayscale) {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
-}
+.d-portfolio .nk-portfolio-item {
+  position: relative;
 
-.d-portfolio .nk-portfolio-item .nk-image-box-overlay {
-  opacity: 1;
-  transition: opacity 0.3s linear;
-}
-.d-portfolio
-  .nk-portfolio-item:not(:hover):not(.d-no-grayscale)
+  &:hover,
+  &.active {
+    &::before {
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .nk-image-box-overlay {
+      opacity: 1;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: background 0.3s ease-in;
+  }
+
   .nk-image-box-overlay {
-  opacity: 0;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
 }
 
 .d-btn.d-btn-color-blue {
@@ -744,4 +754,59 @@ h6 {
   @media (min-width: 992px) {
     background: #000 !important;
   }
+}
+
+.d-portfolio-isotope {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
+
+  @media #{$m_tablet} {
+    max-width: none;
+  }
+
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.nk-image-box {
+  &.ratio2_1,
+  &.ratio1_2 {
+    &::before {
+      margin-top: 100%;
+    }
+  }
+
+  @media (max-width: 1199px) and (min-width: 992px) {
+    width: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    &.ratio2_1::before {
+      margin-top: 50%;
+    }
+    &.ratio1_2::before {
+      margin-top: 200%;
+    }
+  }
+}
+.d-portfolio-isotope {
+  .nk-isotope-item.nk-isotope-item-x2,
+  .nk-isotope-item.nk-isotope-item-x3,
+  .nk-isotope-3-cols .nk-isotope-item.nk-isotope-item-x2,
+  .nk-isotope-3-cols .nk-isotope-item.nk-isotope-item-x3,
+  .nk-isotope-item,
+  .nk-isotope.nk-isotope-3-cols .nk-isotope-item.nk-isotope .nk-isotope-item,
+  .nk-isotope-3-cols .nk-isotope-item {
+    @media (max-width: 1199px) and (min-width: 760px) {
+      width: 50%;
+    }
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
 }
