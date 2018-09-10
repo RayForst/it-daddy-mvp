@@ -57,27 +57,29 @@ app.get('/about', (req, res) => {
 
 app.post('/contact', urlencodedParser, (req, res) => {
   if (!req.body) res.statusCode(404)
-  console.log(req.body)
 
   const HelperOptions = {
     from: '"It daddy" <admin@itdaddy.ca>',
     to: 'sergeikalpakov@gmail.com',
     subject: 'Contact form',
-    text: 'Text from contact form',
+    text: `Text from contact form${JSON.stringify(req.body)}`,
+    html: `<h1>Text from contact form</h1>
+      <div>Client Name: ${req.body.name}</div>
+      <div>Client Email: ${req.body.email}</div>
+      <div>Message: ${req.body.message}</div>
+    `, // html body
   }
 
   transporter.sendMail(HelperOptions, (error, info) => {
     if (error) console.log(error)
-    else console.log('Success ', info)
+    else console.log('Mail send Success')
 
     transporter.close()
   })
 
   res.json({
     type: 'success',
-    message: 'Message Thank you for your message. It has been sent.',
-    responseText: 'responseTExt Thank you for your message. It has been sent.',
-    response: 'response Thank you for your message. It has been sent.',
+    response: 'Thank you for your message. It has been sent.',
   })
 })
 
