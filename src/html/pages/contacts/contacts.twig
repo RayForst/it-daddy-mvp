@@ -6,21 +6,16 @@
         <div class="container">
             <div class="text-left d-header-text-container">
                 <h1>
-                    Fell Free to Contact Us<span class="d-cursor">_</span>
+                    Fell free to contact us<span class="d-cursor">_</span>
                 </h1>
             </div>
         </div>
         <div class="nk-gap-4"></div>
     </div>
 
-    {% include './_contact-benefits.twig' %}
-
     <!-- START: Partners -->
     <div class="nk-box">
-        <div class="bg-image bg-image-parallax op-2">
-            <img class="jarallax-img" src="assets/images/contacts-bg.jpg" alt="">
-        </div>
-        <div class="nk-gap-4"></div>
+        <div class="nk-gap-2"></div>
         <div class="container d-contact-form">
             <div class="row">
                 <div class="col-lg-5">
@@ -34,7 +29,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 d-contacts-form">
-                    <div class="nk-box-2 bg-black">
+                    <div class="nk-box-2 bg-transparent">
                         <div class="nk-gap-1"></div>
                         <form action="/contact" class="nk-form nk-form-ajax nk-form-style-1" method="post">
                             <input type="email" class="form-control required" name="email" placeholder="Email *">
@@ -57,9 +52,10 @@
                 </div>
             </div>
         </div>
-        <div class="nk-gap-4"></div>
     </div>
     <!-- END: Partners -->
+
+    {% include './_contact-benefits.twig' %}
 
     {% include './_map.twig' %}
 {% endblock %}

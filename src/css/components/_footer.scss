@@ -19,11 +19,11 @@
   letter-spacing: normal;
   color: #9b9b9b;
   transition: color 0.4s ease-out;
-}
 
-.d-footer-links a:hover {
-  text-decoration: none;
-  color: #fff;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .d-footer-links li {
@@ -90,9 +90,15 @@
     max-width: 300px;
     display: inline-flex;
     margin-right: 16px;
+    transition: color 0.3s ease;
 
     @media #{$m_desktop} {
       text-align: right;
+    }
+
+    &:hover {
+      color: #00e676;
+      text-decoration: none;
     }
   }
 }

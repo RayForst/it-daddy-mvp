@@ -825,3 +825,39 @@ body,
 .nk-portfolio-list-2 .nk-portfolio-item .nk-portfolio-text-box > div {
   box-shadow: 0 3px 46px 8px rgba(0, 230, 118, 0.1);
 }
+
+.text-color-main {
+  color: #00e676 !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.ul-d {
+  li::before {
+    content: "•";
+    color: #00e676;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 37px;
+    line-height: 16px;
+    position: absolute;
+  }
+}
+
+.d-members {
+  .nk-image-box-1 {
+    height: 200px;
+    display: inline-flex;
+  }
+
+  svg {
+    width: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
