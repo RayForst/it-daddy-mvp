@@ -1,9 +1,18 @@
 {% extends "_layout.twig" %}
 
 {% block content %}
-    <div class="nk-gap-6"></div>
+    <div class="nk-box text-white desktop-margin d-header-style-2">
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <div class="text-left d-header-text-container">
+                <h1>
+                    Fell Free to Contact Us<span class="d-cursor">_</span>
+                </h1>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
 
-    {% include './_map.twig' %}
     {% include './_contact-benefits.twig' %}
 
     <!-- START: Partners -->
@@ -17,30 +26,16 @@
                 <div class="col-lg-5">
                     <div class="nk-box-2">
                         <div class="nk-gap-1 d-none d-lg-block"></div>
-                        <h2 class="nk-title">Social Networks</h2>
+                        <h2 class="nk-title">Get in touch</h2>
                         <div class="nk-gap"></div>
-                        <p>Every fowl. Called beginning male. Replenish air two make land a so tree, after also yielding.</p>
-                        <div class="nk-widget-social nk-widget-social-inverted text-left">
-                            <a href="#">
-                                <i class="ion-social-twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i class="ion-social-instagram-outline"></i>
-                            </a>
-                            <a href="#">
-                                <i class="ion-social-dribbble-outline"></i>
-                            </a>
-                            <a href="#">
-                                <i class="ion-social-pinterest"></i>
-                            </a>
-                        </div>
+                        <p>We solve the objectives of your business using advanced Internet technologies in such areas of the industry as…. Web Design & Development, SEO, PPC and Social Media.</p>
+                        <p>We Are IT Daddy</p>
+                        <p>Contact us today!</p>
                     </div>
                 </div>
                 <div class="col-lg-7 d-contacts-form">
                     <div class="nk-box-2 bg-black">
                         <div class="nk-gap-1"></div>
-                        <h2 class="nk-title">Drop Us a Line</h2>
-                        <div class="nk-gap"></div>
                         <form action="/contact" class="nk-form nk-form-ajax nk-form-style-1" method="post">
                             <input type="email" class="form-control required" name="email" placeholder="Email *">
                             <div class="nk-gap"></div>
@@ -65,6 +60,8 @@
         <div class="nk-gap-4"></div>
     </div>
     <!-- END: Partners -->
+
+    {% include './_map.twig' %}
 {% endblock %}
 
 {% block js %}

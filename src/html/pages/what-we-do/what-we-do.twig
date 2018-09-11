@@ -14,14 +14,14 @@
     </div>
     <div class="container">
         <div class="nk-gap-2"></div>
-        {% include 'components/_image-block.twig' with { link:'/what-we-do/service', icon: 'wwd-design.svg', title: 'Web development and design', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
-        {% include 'components/_image-block.twig' with { link:'/what-we-do/service', icon: 'wwd-seo.svg', imageLeft: true, title: 'Organic SEO', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
-        {% include 'components/_image-block.twig' with { link:'/what-we-do/service', icon: 'wwd-social.svg', title: 'Social media', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
-        {% include 'components/_image-block.twig' with { link:'/what-we-do/service', icon: 'wwd-ppc.svg', imageLeft: true, title: 'Pay per click', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        {% include 'components/_image-block.twig' with { linkText: 'Learn more', link:'/what-we-do/web-development', icon: 'wwd-design.svg', title: 'Web development and design', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        {% include 'components/_image-block.twig' with { linkText: 'Learn more', link:'/what-we-do/organic-seo', icon: 'wwd-seo.svg', imageLeft: true, title: 'Organic SEO', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        {% include 'components/_image-block.twig' with { linkText: 'Learn more', link:'/what-we-do/social-media', icon: 'wwd-social.svg', title: 'Social media', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        {% include 'components/_image-block.twig' with { linkText: 'Learn more', link:'/what-we-do/ppc', icon: 'wwd-ppc.svg', imageLeft: true, title: 'Pay per click', text: 'Things move fast in today’s online world; often much too fast for the average business owner to keep up. We focus on keeping your business at the forefront of the internet so you can worry about the day-to-day business decisions that made you (or will make you) successful in the first place.' } %}
+        <div class="nk-gap-4"></div>
     </div>
 
     {% include 'components/_portfolio-heading.twig' %}
-
 {% endblock %}
 
 {% block js %}

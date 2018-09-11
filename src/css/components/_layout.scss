@@ -576,7 +576,7 @@
 
 .d-contact-benefits {
   .nk-box-line::before {
-    border-color: #00e676;
+    border-color: #9b9b9b;
     opacity: 1;
   }
 
@@ -807,6 +807,21 @@ h6 {
   }
 }
 
-body {
+body,
+.nk-sub-title {
   font-family: "Montserrat", sans-serif;
+}
+
+.d-members {
+  .nk-title {
+    color: #fff;
+  }
+  .nk-sub-title {
+    color: #9b9b9b;
+    font-style: normal;
+  }
+}
+
+.nk-portfolio-list-2 .nk-portfolio-item .nk-portfolio-text-box > div {
+  box-shadow: 0 3px 46px 8px rgba(0, 230, 118, 0.1);
 }

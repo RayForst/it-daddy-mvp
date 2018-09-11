@@ -44,7 +44,8 @@ app.get('/what-we-do', (req, res) => {
 })
 
 app.get('/what-we-do/:name', (req, res) => {
-  res.sendFile(`${htmlPath}/service.html`)
+  console.log(req.params)
+  res.sendFile(`${htmlPath}/${req.params.name}.html`)
 })
 
 app.get('/contacts', (req, res) => {
@@ -89,4 +90,4 @@ app.use('/css', express.static('static/css'))
 app.use('/js', express.static('static/js'))
 app.use('/fonts', express.static('static/fonts'))
 
-app.listen(8000)
+app.listen(config.port)

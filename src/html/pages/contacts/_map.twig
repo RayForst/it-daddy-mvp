@@ -1,13 +1,13 @@
 <div class="row no-gutters bg-dark-2 text-white  desktop-margin">
-    <div class="col-lg-8">
+    <div class="col-md-12">
         <!-- START: Google Map -->
         <div id="google-map-contact" class="nk-gmaps nk-gmaps-lg"></div>
         <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBiqPVo8Anjm534FSZ4-89L1H1yZxfQWvU"></script>
         <script>
             function initializeGmaps() {
                 var LatLng = {
-                    lat: 47.496474,
-                    lng: 19.0484679
+                    lat: 49.283690,
+                    lng: -123.111930
                 };
                 var mapCanvas = document.getElementById('google-map-contact');
                 var mapOptions = {
@@ -24,160 +24,171 @@
                 // style from https://snazzymaps.com/style/151/ultra-light-with-labels
                 var styledMapType = new google.maps.StyledMapType([
                     {
-                        "featureType": "water",
-                        "elementType": "geometry.fill",
+                        "featureType": "all",
+                        "elementType": "labels.text.fill",
                         "stylers": [
                             {
-                                "color": "#d3d3d3"
-                            }
-                        ]
-                    }, {
-                        "featureType": "transit",
-                        "stylers": [
-                            {
-                                "color": "#808080"
+                                "saturation": 36
                             }, {
-                                "visibility": "off"
+                                "color": "#8e8d8d"
+                            }, {
+                                "lightness": 40
+                            }, {
+                                "weight": "0.01"
+                            }, {
+                                "gamma": "1.44"
                             }
                         ]
                     }, {
-                        "featureType": "road.highway",
-                        "elementType": "geometry.stroke",
+                        "featureType": "all",
+                        "elementType": "labels.text.stroke",
                         "stylers": [
                             {
                                 "visibility": "on"
                             }, {
-                                "color": "#b3b3b3"
-                            }
-                        ]
-                    }, {
-                        "featureType": "road.highway",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "color": "#ffffff"
-                            }
-                        ]
-                    }, {
-                        "featureType": "road.local",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "visibility": "on"
+                                "color": "#000000"
                             }, {
-                                "color": "#ffffff"
-                            }, {
-                                "weight": 1.8
+                                "lightness": 16
                             }
                         ]
                     }, {
-                        "featureType": "road.local",
-                        "elementType": "geometry.stroke",
+                        "featureType": "all",
+                        "elementType": "labels.icon",
                         "stylers": [
                             {
-                                "color": "#d7d7d7"
-                            }
-                        ]
-                    }, {
-                        "featureType": "poi",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "visibility": "on"
+                                "visibility": "simplified"
                             }, {
-                                "color": "#ebebeb"
+                                "hue": "#00ff57"
+                            }, {
+                                "lightness": "8"
+                            }, {
+                                "saturation": "-33"
+                            }, {
+                                "invert_lightness": true
                             }
                         ]
                     }, {
                         "featureType": "administrative",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#a7a7a7"
-                            }
-                        ]
-                    }, {
-                        "featureType": "road.arterial",
                         "elementType": "geometry.fill",
                         "stylers": [
                             {
-                                "color": "#ffffff"
+                                "color": "#929292"
+                            }, {
+                                "lightness": 20
                             }
                         ]
                     }, {
-                        "featureType": "road.arterial",
-                        "elementType": "geometry.fill",
+                        "featureType": "administrative",
+                        "elementType": "geometry.stroke",
                         "stylers": [
                             {
-                                "color": "#ffffff"
+                                "color": "#353535"
+                            }, {
+                                "lightness": 17
+                            }, {
+                                "weight": 1.2
                             }
                         ]
                     }, {
                         "featureType": "landscape",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#010101"
+                            }, {
+                                "lightness": 20
+                            }
+                        ]
+                    }, {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#020202"
+                            }, {
+                                "lightness": 21
+                            }
+                        ]
+                    }, {
+                        "featureType": "road.highway",
                         "elementType": "geometry.fill",
                         "stylers": [
                             {
-                                "visibility": "on"
+                                "color": "#3fa435"
                             }, {
-                                "color": "#efefef"
-                            }
-                        ]
-                    }, {
-                        "featureType": "road",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#696969"
-                            }
-                        ]
-                    }, {
-                        "featureType": "administrative",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "visibility": "on"
+                                "lightness": "-30"
                             }, {
-                                "color": "#737373"
+                                "saturation": "0"
+                            }, {
+                                "gamma": "1"
                             }
                         ]
                     }, {
-                        "featureType": "poi",
-                        "elementType": "labels.icon",
+                        "featureType": "road.highway",
+                        "elementType": "geometry.stroke",
                         "stylers": [
                             {
-                                "visibility": "off"
-                            }
-                        ]
-                    }, {
-                        "featureType": "poi",
-                        "elementType": "labels",
-                        "stylers": [
-                            {
-                                "visibility": "off"
+                                "color": "#000000"
+                            }, {
+                                "lightness": 29
+                            }, {
+                                "weight": 0.2
                             }
                         ]
                     }, {
                         "featureType": "road.arterial",
-                        "elementType": "geometry.stroke",
+                        "elementType": "geometry",
                         "stylers": [
                             {
-                                "color": "#d6d6d6"
-                            }
-                        ]
-                    }, {
-                        "featureType": "road",
-                        "elementType": "labels.icon",
-                        "stylers": [
-                            {
+                                "color": "#3fa435"
+                            }, {
+                                "lightness": "-59"
+                            }, {
+                                "saturation": "-35"
+                            }, {
+                                "weight": "0.37"
+                            }, {
                                 "visibility": "off"
                             }
                         ]
-                    }, {}, {
-                        "featureType": "poi",
-                        "elementType": "geometry.fill",
+                    }, {
+                        "featureType": "road.local",
+                        "elementType": "geometry",
                         "stylers": [
                             {
-                                "color": "#dadada"
+                                "color": "#fcfdfc"
+                            }, {
+                                "lightness": "6"
+                            }, {
+                                "saturation": "-100"
+                            }, {
+                                "gamma": "0.53"
+                            }, {
+                                "visibility": "off"
+                            }
+                        ]
+                    }, {
+                        "featureType": "transit",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#000000"
+                            }, {
+                                "lightness": 19
+                            }
+                        ]
+                    }, {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#538ea8"
+                            }, {
+                                "lightness": "0"
+                            }, {
+                                "saturation": "-7"
+                            }, {
+                                "gamma": "0.5"
                             }
                         ]
                     }
@@ -189,17 +200,5 @@
             }
         </script>
         <!-- END: Google Map -->
-    </div>
-    <div class="col-lg-4 align-self-center">
-        <div class="nk-box-3">
-            <div class="nk-gap-5 d-none d-lg-block"></div>
-            <div class="nk-gap-1"></div>
-            <h1 class="nk-title h2">Feel Free to Contact Us</h1>
-            <h2 class="nk-sub-title d-color-green">Better to call us during business hours</h2>
-
-            <div class="nk-gap"></div>
-            <div>Tree. Herb wherein lights thing yielding subdue isn't had it to wherein. Land shall sea thing.</div>
-            <div class="nk-gap-1"></div>
-        </div>
     </div>
 </div>

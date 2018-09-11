@@ -1,5 +1,3 @@
-import './venodor/fontawesome/all'
-import './venodor/fontawesome/v4-shims'
 import './venodor/object-fit-images/ofi.min'
 import 'bootstrap'
 import './venodor/from-template/sticky-kit.min'

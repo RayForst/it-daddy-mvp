@@ -50,6 +50,12 @@
     background-image: url("../assets/images/custom-web-development.jpg");
   }
 
+  &--our-work::before {
+    background-image: url("../assets/images/header/img-4.jpg");
+  }
+  &--about::before {
+    background-image: url("../assets/images/header/img-6.jpg");
+  }
   .d-header-text-container {
     font-size: 42px;
     font-weight: normal;

@@ -81,7 +81,14 @@
 }
 
 .glitch--style-7,
-.glitch--style-8 {
+.glitch--style-8,
+.glitch--style-9,
+.glitch--style-10,
+.glitch--style-11,
+.glitch--style-12,
+.glitch--style-13,
+.glitch--style-14,
+.glitch--style-16 {
   --gap-horizontal: 50px;
   --gap-vertical: 100px;
   --time-anim: 2.25s;
@@ -198,6 +205,26 @@
 
 .glitch--style-8 .glitch__img {
   background-image: url("../assets/images/temp-img.jpg");
+}
+
+.glitch--style-9 .glitch__img {
+  background-image: url("../assets/images/portfolio-main/Desktop HD copy.jpg");
+}
+
+.glitch--style-10 .glitch__img {
+  background-image: url("../assets/images/portfolio-main/Korso 1.jpg");
+}
+
+.glitch--style-11 .glitch__img {
+  background-image: url("../assets/images/portfolio-main/Insta.ad 1.jpg");
+}
+
+.glitch--style-12 .glitch__img {
+  background-image: url("../assets/images/portfolio-main/Imanta 1.jpg");
+}
+
+.glitch--style-13 .glitch__img {
+  background-image: url("../assets/images/portfolio-main/Chip 1.jpg");
 }
 
 /* Set the background colors for the glitch images*/
