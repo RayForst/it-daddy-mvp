@@ -62,14 +62,20 @@ app.post('/contact', urlencodedParser, (req, res) => {
   const HelperOptions = {
     from: '"It daddy" <admin@itdaddy.ca>',
     to: 'sergeikalpakov@gmail.com',
-    subject: 'Contact form',
+    subject: 'New client!',
     text: `Text from contact form${JSON.stringify(req.body)}`,
     html: `<h1>Text from contact form</h1>
       <div>Client Name: ${req.body.name}</div>
       <div>Client Email: ${req.body.email}</div>
+      <div>Client phone: ${req.body.phone}</div>
+      <div>Company:: ${req.body.company}</div>
       <div>Message: ${req.body.message}</div>
+      <div>Prefered Contact type: ${req.body.contactType}</div>
+      <div>Prefered Contact time: ${req.body.contactTime}</div>
     `, // html body
   }
+
+  console.log(req.body)
 
   transporter.sendMail(HelperOptions, (error, info) => {
     if (error) console.log(error)

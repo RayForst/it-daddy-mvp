@@ -19,8 +19,6 @@ function rand(min, max) {
   return Math.floor(Math.random() * (max - min)) + min
 }
 
-let iterationCount = 0
-
 function isInViewport($item, returnRect) {
   const rect = $item[0].getBoundingClientRect()
   let result = 1
@@ -53,7 +51,6 @@ let dotId = 0
 
 $(() => {
   const elementSize = 9 // circle
-  const MAP = $('.d-bg .daddy-bg-viewport')
   const rotateClasses = [' ', ' d-rotate-90', ' d-rotate-180', ' d-rotate-270']
   const schemas = {
     default: [
@@ -76,6 +73,7 @@ $(() => {
     }
     let dotsHtml = ''
     currentObj.addClass('inited')
+
     const getRandomScheme = (viewport, empty = false) => {
       const mod = empty ? ' daddy-dots--empty' : ''
       const schemeClass = empty ? schemas.empty : schemas.default
@@ -87,26 +85,20 @@ $(() => {
       if (!empty) {
         dotId += 1
         idString = ` id="daddy-dot-${dotId}" `
-        let dot = `#daddy-dot-${dotId}`
+        const dot = `#daddy-dot-${dotId}`
 
         setInterval(() => {
-          dot = $(dot)
-          changePosition(dot)
+          if (isInViewport(viewport) > 0) changePosition($(dot))
         }, rand(6000, 30000))
       }
 
       const randPos = getRandomPosition(viewport)
 
-      return `<div class="daddy-dots${rotate}${schemeClassRand}${mod} "${idString}style="top:${
+      return `<div class="daddy-dots opacity${rotate}${schemeClassRand}${mod} "${idString}style="top:${
         randPos.y
-      }px;left:${randPos.x}px;transition-delay:
-                            ${transitionDelay}ms; ">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>`
+      }px;left:${randPos.x}px;transition-delay:${transitionDelay}ms;opacity: 0;">
+        <div></div><div></div><div></div><div></div><div></div>
+      </div>`
     }
 
     const appendDot = (viewport) => {
@@ -118,23 +110,24 @@ $(() => {
     }
 
     const randVal = currentObj.closest('.d-bg').data('d')
-    const randEmptyVal = currentObj.closest('.d-bg').data('d-empty')
+    const randEmptyVal = currentObj.closest('.d-bg').data('d-empty');
+    (function myLoop(i) {
+      setTimeout(() => {
+        for (let r = 0; r < conteinerSize.w / elementSize; r += elementSize) {
+          if (randEmptyVal && rand(1, randEmptyVal) === 1) appendEmptyDot(currentObj)
+          if (randVal && rand(1, randVal) === 1) appendDot(currentObj)
 
-    for (let i = 0; i < conteinerSize.h / elementSize; i += elementSize) {
-      for (let r = 0; r < conteinerSize.w / elementSize; r += elementSize) {
-        ++iterationCount
-        if (randEmptyVal && rand(1, randEmptyVal) === 1) {
-          appendEmptyDot(currentObj)
-        }
-        if (randVal && rand(1, randVal) === 1) {
-          appendDot(currentObj)
-        }
+          currentObj.append(dotsHtml)
+          dotsHtml = ''
+        } //  your code here
 
-        //        console.log(iterationCount)
-      }
-    }
-
-    currentObj.html(dotsHtml)
+        $('.daddy-dots.opacity')
+          .removeClass('opacity')
+          .css('opacity', 1)
+        i -= elementSize
+        if (i > 0) myLoop(i) //  decrement i and call myLoop again if i > 0
+      }, 500)
+    }(conteinerSize.h / elementSize))
 
     setTimeout(() => {
       currentObj.closest('.d-bg').addClass('inited')
@@ -142,6 +135,7 @@ $(() => {
   }
 
   function changePosition(dot) {
+    console.log('pos change')
     const currentObj = dot.closest('.d-bg').find('.daddy-bg-viewport')
     const randPos = getRandomPosition(currentObj)
 
@@ -150,12 +144,11 @@ $(() => {
     setTimeout(() => {
       dot.removeClass('d-rotate-90 d-rotate-180 d-rotate-270')
       const rotate = rotateClasses[rand(0, rotateClasses.length)].trim()
-      if (rotate != '') dot.addClass(rotate)
+      if (rotate !== '') dot.addClass(rotate)
 
       dot.css({ top: `${randPos.y}px`, left: `${randPos.x}px` })
-
       dot.css('opacity', 1)
-    }, 2100)
+    }, 1500)
   }
 
   function getRandomPosition(viewport) {

@@ -319,7 +319,7 @@
 
 .d-ca-block .nk-title {
   font-family: "Varela Round", sans-serif;
-  max-width: 900px;
+  max-width: 985px;
   font-size: 36px;
   font-weight: normal;
   font-style: normal;
@@ -576,8 +576,7 @@
 
 .d-contact-benefits {
   .nk-box-line::before {
-    border-color: #9b9b9b;
-    opacity: 1;
+    display: none;
   }
 
   .nk-ibox-icon {
@@ -859,5 +858,38 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.d-contacts-form .nk-form-style-1 .form-control {
+  ::-webkit-input-placeholder,
+  &::-webkit-input-placeholder {
+    color: #fff;
+  }
+  background: rgba(255, 255, 255, 0.1);
+
+  color: #fff;
+}
+
+.d-breadcrumbs {
+  span {
+    color: #9b9b9b !important;
+  }
+}
+
+.text-gray {
+  color: #9b9b9b !important;
+}
+
+select option[disabled] {
+  color: #9b9b9b;
+}
+
+.d-contacts-form .nk-form-style-1 .form-group {
+  select {
+    text-indent: 12px;
+  }
+  .disabled-state {
+    color: #848484;
   }
 }

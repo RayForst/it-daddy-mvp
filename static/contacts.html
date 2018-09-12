@@ -93,7 +93,7 @@
         <div class="container">
             <div class="text-left d-header-text-container">
                 <h1>
-                    Fell free to contact us<span class="d-cursor">_</span>
+                    Feel free to contact us<span class="d-cursor">_</span>
                 </h1>
             </div>
         </div>
@@ -119,12 +119,34 @@
                     <div class="nk-box-2 bg-transparent">
                         <div class="nk-gap-1"></div>
                         <form action="/contact" class="nk-form nk-form-ajax nk-form-style-1" method="post">
-                            <input type="email" class="form-control required" name="email" placeholder="Email *">
-                            <div class="nk-gap"></div>
                             <input type="text" class="form-control required" name="name" placeholder="Name *">
                             <div class="nk-gap"></div>
-                            <textarea class="form-control required" name="message" rows="5" placeholder="Message *"></textarea>
+                            <input type="email" class="form-control required" name="email" placeholder="Email *">
                             <div class="nk-gap"></div>
+                            <input type="text" class="form-control required" name="phone" placeholder="Phone Number *">
+                            <div class="nk-gap"></div>
+                            <input type="text" class="form-control" name="company" placeholder="Company Name">
+                            <div class="nk-gap"></div>
+
+                            <input type="text" class="form-control" name="website" placeholder="Website">
+                            <div class="nk-gap"></div>
+                            <textarea class="form-control" name="message" rows="5" placeholder="What would You like to discuss?"></textarea>
+                            <div class="nk-gap"></div>
+                            <div class="form-group">
+                                <select name="contactType" class="form-control d-select disabled-state">
+                                    <option value="" disabled="disabled" selected="selected">Prefered contact method</option>
+                                    <option value="email">E-mail</option>
+                                    <option value="phone">Phone</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="contactTime" class="form-control d-select disabled-state">
+                                    <option value="" disabled="disabled" selected="selected">Prefered contact time</option>
+                                    <option value="9am-12pm">Morning (9AM - 12PM)</option>
+                                    <option value="12pm-5pm">Afternoon (12PM - 5PM)</option>
+                                    <option value="5pm+">Evening (After 5PM)</option>
+                                </select>
+                            </div>
                             <div class="nk-form-response-success"></div>
                             <div class="nk-form-response-error"></div>
                             <button class="d-btn d-btn-regular nk-btn-effect-2-right">
@@ -454,7 +476,7 @@
     </div>
     <div class="nk-copyright">
         <div class="container text-center d-footer-copyright">
-            <span>&copy;© 2018 IT Daddy. All rights reserved</span>
+            <span>&copy; 2018 IT Daddy. All rights reserved</span>
             <span class="d-give-a-h">Baked and developed with 💚in 🇨🇦Canada</span>
         </div>
     </div>
@@ -474,7 +496,7 @@
     </ul>
 </div>
         <!-- START: Scripts -->
-        
+
         <!-- END: Scripts -->
 
         <script src="/js/common-chunk.js"></script>

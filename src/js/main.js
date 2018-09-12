@@ -15,3 +15,9 @@ import 'gsap/ScrollToPlugin'
 import './venodor/khaki'
 import './venodor/khaki-init'
 import './dots-bg'
+
+console.log('len', $('select.d-select').find('option[disabled]').length)
+
+$('select.d-select').on('change', function () {
+  console.log($(this).val())
+})

@@ -1,7 +1,7 @@
 {% extends "_layout.twig" %}
 
 {% block content %}
-    <div class="nk-box text-white desktop-margin d-header-style-2 d-header-style-2--our-work">
+    <div class="nk-box text-white desktop-margin d-header-style-2 d-header-style-2--media">
         <div class="nk-gap-4"></div>
         <div class="container">
             <div class="text-left d-header-text-container">
@@ -13,7 +13,10 @@
         <div class="nk-gap-4"></div>
     </div>
     <div class="container text-white">
-        <div class="nk-gap-4"></div>
+
+        {% include './_breadcrumbs.twig' with {
+            name : 'Social Media Promotion'
+        } %}
         <h3>Promotion on social media websites</h3>
         <p class="d-service-text">
             Research, from March 2017, shows that there are 1.86 bln on Facebook every month. The average increase rate of new users is 17% each year. There is a huge potential that a large part of those users can become your customers.

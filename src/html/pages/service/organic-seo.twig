@@ -1,7 +1,7 @@
 {% extends "_layout.twig" %}
 
 {% block content %}
-    <div class="nk-box text-white desktop-margin d-header-style-2 d-header-style-2--our-work">
+    <div class="nk-box text-white desktop-margin d-header-style-2 d-header-style-2--seo">
         <div class="nk-gap-4"></div>
         <div class="container">
             <div class="text-left d-header-text-container">
@@ -12,8 +12,11 @@
         </div>
         <div class="nk-gap-4"></div>
     </div>
+
+    {% include './_breadcrumbs.twig' with {
+        name : 'Organic SEO'
+    } %}
     <div class="container">
-        <div class="nk-gap-4"></div>
         <p class="d-service-text">
             Every day people are searching for billions of different things on Google.
             <br><br>
