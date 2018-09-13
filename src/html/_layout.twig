@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        {% set assetVersion = 1 %}
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -28,7 +30,7 @@
         <link href="https://fonts.googleapis.com/css?family=Varela+Round&amp;subset=latin-ext" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-        <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/layout.css?v={{assetVersion}}">
     </head>
 
     <body>
@@ -55,11 +57,7 @@
 
         {% include 'components/_back-to-top.twig' %}
 
-        <!-- START: Scripts -->
-
-        <!-- END: Scripts -->
-
-        <script src="/js/common-chunk.js"></script>
+        <script src="/js/common-chunk.js?v={{assetVersion}}"></script>
         {% block js %}{% endblock %}
     </body>
 </html>
