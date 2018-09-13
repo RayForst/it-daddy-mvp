@@ -9,7 +9,17 @@
         
         <meta name="author" content="Sergey Kolpakov">
 
-        
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.ico">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -168,21 +178,7 @@
     <div class="nk-box d-contact-benefits">
         <div class="nk-gap d-none d-lg-block"></div>
         <div class="row no-gutters">
-            <div class="col-lg-4">
-                <div class="nk-box-3 nk-box-line">
-                    <div class="nk-gap-2 d-none d-lg-block"></div>
-                    <div class="nk-ibox-1">
-                        <div class="nk-ibox-icon nk-ibox-icon-circle">
-                            <span class="ion-ios-telephone"></span>
-                        </div>
-                        <div class="nk-ibox-cont">
-                            <h3 class="nk-ibox-title pt-5 mb-0">Phone</h3>
-                            <div>+ 3 (700) 123 10 78</div>
-                        </div>
-                    </div>
-                    <div class="nk-gap-2 d-none d-lg-block"></div>
-                </div>
-            </div>
+            
             <div class="col-lg-4">
                 <div class="nk-box-3 nk-box-line">
                     <div class="nk-gap-2 d-none d-lg-block"></div>
@@ -192,7 +188,7 @@
                         </div>
                         <div class="nk-ibox-cont">
                             <h3 class="nk-ibox-title pt-5 mb-0">Email</h3>
-                            <div>contact@khaki.com</div>
+                            <div>hello@itdaddy.ca</div>
                         </div>
                     </div>
                     <div class="nk-gap-2 d-none d-lg-block"></div>
@@ -207,7 +203,7 @@
                         </div>
                         <div class="nk-ibox-cont">
                             <h3 class="nk-ibox-title pt-5 mb-0">Address</h3>
-                            <div>Budapest, 1051 Hungary</div>
+                            <div>422 Richards St, Suite 170, Vancouver BC V6B 2 Z4, Canada</div>
                         </div>
                     </div>
                     <div class="nk-gap-2 d-none d-lg-block"></div>
@@ -218,7 +214,7 @@
     </div>
 
 </div>
-    <div class="row no-gutters bg-dark-2 text-white  desktop-margin">
+    <div class="row no-gutters bg-dark-2 text-white desktop-margin d-contact-map">
     <div class="col-md-12">
         <!-- START: Google Map -->
         <div id="google-map-contact" class="nk-gmaps nk-gmaps-lg"></div>
@@ -239,7 +235,7 @@
                     mapTypeId: 'KhakiStyle'
                 }
                 var map = new google.maps.Map(mapCanvas, mapOptions);
-                var marker = new google.maps.Marker({position: LatLng, map: map, icon: 'assets/images/marker-2.png', title: 'Khaki Office'});
+                var marker = new google.maps.Marker({position: LatLng, map: map, icon: 'assets/images/map-icon.png', title: 'Khaki Office'});
 
                 // style from https://snazzymaps.com/style/151/ultra-light-with-labels
                 var styledMapType = new google.maps.StyledMapType([

@@ -319,7 +319,7 @@
 
 .d-ca-block .nk-title {
   font-family: "Varela Round", sans-serif;
-  max-width: 985px;
+  max-width: 1000px;
   font-size: 36px;
   font-weight: normal;
   font-style: normal;
@@ -470,6 +470,10 @@
   .nk-image-box-overlay {
     opacity: 0;
     transition: opacity 0.3s linear;
+    left: 30px;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
   }
 }
 
@@ -875,6 +879,10 @@ ul {
   span {
     color: #9b9b9b !important;
   }
+
+  a {
+    color: #00e676;
+  }
 }
 
 .text-gray {
@@ -891,5 +899,23 @@ select option[disabled] {
   }
   .disabled-state {
     color: #848484;
+  }
+}
+
+.d-contact-map {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.d-portfolio-isotope {
+  .nk-box-1 {
+    padding: 0;
+  }
+  .nk-image-box-big-title {
+    margin-bottom: 0;
   }
 }

@@ -2,13 +2,16 @@ const express = require('express')
 const bodyPsarer = require('body-parser')
 const robots = require('express-robots')
 const nodemailer = require('nodemailer')
+const favicon = require('serve-favicon')
 const fs = require('fs')
+const path = require('path')
 
 const config = JSON.parse(fs.readFileSync('config.json'))
 const app = express()
 const htmlPath = `${__dirname}/static/`
 const urlencodedParser = bodyPsarer.urlencoded({ extended: false })
 
+app.use(favicon(path.join(__dirname, '/', 'favicon.ico')))
 app.use(robots({ UserAgent: '*', Disallow: '/' }))
 
 const transporter = nodemailer.createTransport({
@@ -95,5 +98,6 @@ app.use('/img', express.static('static/img'))
 app.use('/css', express.static('static/css'))
 app.use('/js', express.static('static/js'))
 app.use('/fonts', express.static('static/fonts'))
+app.use('/favicon', express.static('favicon'))
 
 app.listen(config.port)

@@ -1,4 +1,4 @@
-<div class="row no-gutters bg-dark-2 text-white  desktop-margin">
+<div class="row no-gutters bg-dark-2 text-white desktop-margin d-contact-map">
     <div class="col-md-12">
         <!-- START: Google Map -->
         <div id="google-map-contact" class="nk-gmaps nk-gmaps-lg"></div>
@@ -19,7 +19,7 @@
                     mapTypeId: 'KhakiStyle'
                 }
                 var map = new google.maps.Map(mapCanvas, mapOptions);
-                var marker = new google.maps.Marker({position: LatLng, map: map, icon: 'assets/images/marker-2.png', title: 'Khaki Office'});
+                var marker = new google.maps.Marker({position: LatLng, map: map, icon: 'assets/images/map-icon.png', title: 'Khaki Office'});
 
                 // style from https://snazzymaps.com/style/151/ultra-light-with-labels
                 var styledMapType = new google.maps.StyledMapType([
