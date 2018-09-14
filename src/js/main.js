@@ -16,9 +16,10 @@ import './venodor/khaki'
 import './venodor/khaki-init'
 import './dots-bg'
 
-console.log('len', $('select.d-select').find('option[disabled]').length)
-
 $('select.d-select').on('change', function () {
   $(this).removeClass('disabled-state')
-  console.log('input value', $(this).val())
+})
+
+$('form').on('reset', () => {
+  $('select.d-select').addClass('disabled-state')
 })

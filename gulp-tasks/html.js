@@ -12,6 +12,7 @@ module.exports = function(gulp, plugins, options) {
       }),
       plugins.injectSvg({ base: '/static/' }),
       plugins.rename({ dirname: '' }),
+      plugins.htmlmin({ collapseWhitespace: true }),
       gulp.dest(options.dest),
     )
     .on(
