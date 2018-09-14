@@ -43,13 +43,6 @@ gulp.task('html', () =>
   }),
 )
 
-gulp.task('images', () =>
-  require('./gulp-tasks/images')(gulp, plugins, {
-    src: CONFIG.src + '/assets/images/**/*.{jpg,jpeg,png,svg,gif}',
-    dest: CONFIG.dest + '/assets/images',
-  }),
-)
-
 gulp.task('video', () =>
   require('./gulp-tasks/video')(gulp, plugins, {
     src: CONFIG.src + '/assets/video/**/*.{mov,mp4,ogv,webm}',
@@ -66,7 +59,7 @@ gulp.task('fonts', () =>
 
 gulp.task('clean', () =>
   require('./gulp-tasks/clean')(gulp, plugins, {
-    src: CONFIG.dest + '/*',
+    src: [CONFIG.dest + '/*', '!' + CONFIG.dest + '/assets'],
   }),
 )
 
@@ -87,15 +80,7 @@ gulp.task('serve', function() {
 
 gulp.task(
   'dev',
-  gulp.series(
-    'clean',
-    'images',
-    'fonts',
-    'video',
-    'css',
-    'html',
-    gulp.parallel('js', 'watch', 'serve'),
-  ),
+  gulp.series('clean', 'fonts', 'video', 'css', 'html', gulp.parallel('js', 'watch', 'serve')),
 )
 
-gulp.task('default', gulp.series('clean', 'images', 'fonts', 'video', 'css', 'html', 'js'))
+gulp.task('default', gulp.series('clean', 'fonts', 'video', 'css', 'html', 'js'))

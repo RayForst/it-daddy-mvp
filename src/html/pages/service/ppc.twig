@@ -1,5 +1,10 @@
 {% extends "_layout.twig" %}
 
+{% block title %}
+    PPC -
+    {{ parent() }}
+{% endblock %}
+
 {% block content %}
     <div class="nk-box text-white desktop-margin d-header-style-2 d-header-style-2--ppc">
         <div class="nk-gap-4"></div>
@@ -69,11 +74,7 @@
         <div class="nk-gap-4"></div>
     </div>
 
-    <div class="container d-service-ca pt-50 pb-50">
-        <div class="title">Tailor-made Strategy</div>
-        <p>Every business needs an individual marketing strategy that meets all special requirements of the company, together with a customized design of your website that goes in hand with your marketing plan.</p>
-        <a href="#" class="d-btn d-btn-regular">Get in touch</a>
-    </div>
+    {% include './_service-ca.twig' %}
     <div class="nk-gap-4"></div>
 {% endblock %}
 

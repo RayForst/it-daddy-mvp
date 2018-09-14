@@ -1,5 +1,10 @@
 {% extends "_layout.twig" %}
 
+{% block title %}
+    project -
+    {{ parent() }}
+{% endblock %}
+
 {% block headerCss %}
     nk-navbar-autohide nk-navbar-transparent nk-navbar-sticky nk-navbar-fixed nk-navbar-solid nk-onscroll-show{% endblock %}
 

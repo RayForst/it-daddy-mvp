@@ -12,9 +12,6 @@ const app = express()
 const htmlPath = `${__dirname}/static/`
 const urlencodedParser = bodyPsarer.urlencoded({ extended: false })
 
-app.use(favicon(path.join(__dirname, '/', 'favicon.ico')))
-app.use(robots({ UserAgent: '*', Disallow: '/' }))
-
 const tokenProvider = new GoogleTokenProvider({
   refresh_token: config.refreshToken,
   client_id: config.clientId,
@@ -73,18 +70,10 @@ app.post('/contact', urlencodedParser, (req, res) => {
           accessToken: token,
         },
       })
-      const maillist = [
-        'sergeikalpakov@gmail.com',
-        'hello@itdaddy.ca',
-        'edgar@itdaddy.ca',
-        'alex@itdaddy.ca',
-        'kolpakov@itdaddy.ca',
-        'trafimaf@itdaddy.ca',
-      ]
 
       const HelperOptions = {
         from: '"It daddy" <admin@itdaddy.ca>',
-        to: maillist,
+        to: config.mail,
         subject: 'New client!',
         text: `Text from contact form${JSON.stringify(req.body)}`,
         html: `<h1>Text from contact form</h1>
@@ -123,5 +112,7 @@ app.use('/css', express.static('static/css'))
 app.use('/js', express.static('static/js'))
 app.use('/fonts', express.static('static/fonts'))
 app.use('/favicon', express.static('favicon'))
+app.use(favicon(path.join(__dirname, '/', 'favicon.ico')))
+app.use(robots({ UserAgent: '*', Disallow: '/' }))
 
 app.listen(config.port)

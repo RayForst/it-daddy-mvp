@@ -42,8 +42,8 @@
     background-image: url("../assets/images/header-what-we-do.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.3;
     z-index: -1;
+    animation: fadein 2s forwards;
   }
 
   &--service::before {
@@ -81,5 +81,14 @@
   .d-cursor {
     animation: 0.9s nk-typed-blink infinite;
     color: #00e676;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
   }
 }

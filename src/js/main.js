@@ -20,4 +20,5 @@ console.log('len', $('select.d-select').find('option[disabled]').length)
 
 $('select.d-select').on('change', function () {
   $(this).removeClass('disabled-state')
+  console.log('input value', $(this).val())
 })
