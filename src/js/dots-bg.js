@@ -135,7 +135,6 @@ $(() => {
   }
 
   function changePosition(dot) {
-    console.log('pos change')
     const currentObj = dot.closest('.d-bg').find('.daddy-bg-viewport')
     const randPos = getRandomPosition(currentObj)
 

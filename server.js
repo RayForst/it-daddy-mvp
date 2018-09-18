@@ -1,6 +1,5 @@
 const express = require('express')
 const bodyPsarer = require('body-parser')
-const robots = require('express-robots')
 const nodemailer = require('nodemailer')
 const favicon = require('serve-favicon')
 const fs = require('fs')
@@ -113,6 +112,5 @@ app.use('/js', express.static('static/js'))
 app.use('/fonts', express.static('static/assets/fonts'))
 app.use('/favicon', express.static('favicon'))
 app.use(favicon(path.join(__dirname, '/', 'favicon.ico')))
-app.use(robots({ UserAgent: '*', Disallow: '/' }))
 
 app.listen(config.port)
