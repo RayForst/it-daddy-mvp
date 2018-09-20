@@ -27,10 +27,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Google Fonts -->
-        <link rel="stylesheet" href="/css/layout.css?v={{assetVersion}}">
+        <style>
+            body {
+                background: #000;
+            }
+
+            body.loading * {
+                opacity: 0 !important;
+            }
+        </style>
     </head>
 
-    <body>
+    <body class="loading">
         {% set address = '#170, IT Daddy, Richards Street, Vancouver, Canada' %}
         <header class="nk-header dad-header">
             <nav class="nk-navbar nk-navbar-top dad-header{% block headerCss %}{% endblock %}">
@@ -54,6 +62,7 @@
 
         {% include 'components/_back-to-top.twig' %}
 
+        <link rel="stylesheet" href="/css/layout.css?v={{assetVersion}}">
         <script src="/js/common-chunk.js?v={{assetVersion}}"></script>
         {% block js %}{% endblock %}
 

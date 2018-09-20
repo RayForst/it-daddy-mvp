@@ -16,6 +16,8 @@ import './venodor/khaki'
 import './venodor/khaki-init'
 import './dots-bg'
 
+$('body').removeClass('loading')
+
 $('select.d-select').on('change', function () {
   $(this).removeClass('disabled-state')
 })

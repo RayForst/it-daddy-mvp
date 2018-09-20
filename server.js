@@ -47,6 +47,10 @@ app.get('/about', (req, res) => {
   res.sendFile(`${htmlPath}/about-us.html`)
 })
 
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(`${__dirname}/sitemap.xml`)
+})
+
 app.post('/contact', urlencodedParser, (req, res) => {
   if (!req.body) res.statusCode(404)
 
