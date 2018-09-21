@@ -1,7 +1,6 @@
 const express = require('express')
 const bodyPsarer = require('body-parser')
 const nodemailer = require('nodemailer')
-const robots = require('express-robots')
 const favicon = require('serve-favicon')
 const fs = require('fs')
 const path = require('path')
@@ -50,6 +49,10 @@ app.get('/about', (req, res) => {
 
 app.get('/sitemap.xml', (req, res) => {
   res.sendFile(`${__dirname}/sitemap.xml`)
+})
+
+app.get('/robots.xml', (req, res) => {
+  res.sendFile(`${__dirname}/robots.txt`)
 })
 
 app.post('/contact', urlencodedParser, (req, res) => {
@@ -117,6 +120,5 @@ app.use('/js', express.static('static/js'))
 app.use('/fonts', express.static('static/assets/fonts'))
 app.use('/favicon', express.static('favicon'))
 app.use(favicon(path.join(__dirname, '/', 'favicon.ico')))
-app.use(robots({ UserAgent: '*' }))
 
 app.listen(config.port)
