@@ -117,6 +117,6 @@ app.use('/js', express.static('static/js'))
 app.use('/fonts', express.static('static/assets/fonts'))
 app.use('/favicon', express.static('favicon'))
 app.use(favicon(path.join(__dirname, '/', 'favicon.ico')))
-app.use(robots({ Sitemap: 'https://itdaddy.ca/sitemap.xml' }))
+app.use(robots({ UserAgent: '*', Sitemap: 'https://itdaddy.ca/sitemap.xml' }))
 
 app.listen(config.port)
