@@ -1,2 +1,3 @@
 User-agent:*
+Disallow:
 Sitemap: https://itdaddy.ca/sitemap-news.xml
