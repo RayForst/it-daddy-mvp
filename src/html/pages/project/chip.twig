@@ -1,0 +1,22 @@
+{% extends "_layout.twig" %}
+
+{% block title %}Marketing Agency in Canada|SEO|PPC|SMM|Web Development and Design |
+    {{ parent() }}
+{% endblock %}
+
+{% block headerCss %}
+    nk-navbar-autohide nk-navbar-transparent nk-navbar-sticky nk-navbar-fixed nk-navbar-solid nk-onscroll-show{% endblock %}
+
+{% block content %}
+    <div class="nk-fullpage d-our-work-list">
+        <div class="nk-fullpage-item" style="background-image: url('/assets/images/projects/Chip/Big Case/1.jpg');"></div>
+        <div class="nk-fullpage-item" style="background-image: url('/assets/images/projects/Chip/Big Case/2.jpg');"></div>
+        <div class="nk-fullpage-item" style="background-image: url('/assets/images/projects/Chip/Big Case/3.jpg');"></div>
+        <div class="nk-fullpage-item" style="background-image: url('/assets/images/projects/Chip/Big Case/4.jpg');"></div>
+        <div class="nk-fullpage-item" style="background-image: url('/assets/images/projects/Chip/Big Case/5.jpg');"></div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="/js/index.js?v={{assetVersion}}"></script>
+{% endblock %}
