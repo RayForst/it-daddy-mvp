@@ -27,9 +27,9 @@ app.get('/our-work', (req, res) => {
   res.sendFile(`${htmlPath}/our-work.html`)
 })
 
-app.get('/our-work/:name', (req, res) => {
-  res.sendFile(`${htmlPath}/${req.params.name}.html`)
-})
+// app.get('/our-work/:name', (req, res) => {
+//   res.sendFile(`${htmlPath}/${req.params.name}.html`)
+// })
 
 app.get('/what-we-do', (req, res) => {
   res.sendFile(`${htmlPath}/what-we-do.html`)
