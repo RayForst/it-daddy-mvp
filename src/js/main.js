@@ -22,6 +22,10 @@ $('select.d-select').on('change', function () {
   $(this).removeClass('disabled-state')
 })
 
+$('form[action="/contact"]').on('reset', () => {
+  dataLayer.push ({'event': 'formsend'});
+})
+
 $('form').on('reset', () => {
   $('select.d-select').addClass('disabled-state')
 })
