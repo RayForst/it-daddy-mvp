@@ -11,49 +11,49 @@
 
   <url>
        <loc>https://itdaddy.ca/</loc>
-       <lastmod>2018-11-10T09:03:08+00:00</lastmod>
+       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
   <url>
        <loc>https://itdaddy.ca/our-work</loc>
-       <lastmod>2018-11-10T09:03:08+00:00</lastmod>
+       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://itdaddy.ca/what-we-do/web-development</loc>
-       <lastmod>2018-11-10T09:03:08+00:00</lastmod>
+       <loc>https://itdaddy.ca/web-development</loc>
+       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
        <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+       <priority>0.9500</priority>
   </url>
   <url>
-       <loc>https://itdaddy.ca/what-we-do/organic-seo</loc>
-       <lastmod>2018-11-10T09:03:08+00:00</lastmod>
+       <loc>https://itdaddy.ca/organic-seo</loc>
+       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
        <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+       <priority>0.9500</priority>
   </url>
   <url>
-       <loc>https://itdaddy.ca/what-we-do/social-media</loc>
-       <lastmod>2018-11-10T09:03:08+00:00</lastmod>
+       <loc>https://itdaddy.ca/social-media</loc>
+       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
        <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+       <priority>0.9500</priority>
+  </url>
+  <url>
+       <loc>https://itdaddy.ca/ppc</loc>
+       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.9500</priority>
   </url>
   <url>
        <loc>https://itdaddy.ca/about</loc>
-       <lastmod>2018-11-10T09:03:08+00:00</lastmod>
+       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://itdaddy.ca/contacts</loc>
-       <lastmod>2018-11-10T09:03:08+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://itdaddy.ca/what-we-do/ppc</loc>
-       <lastmod>2018-11-10T09:03:08+00:00</lastmod>
+       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
