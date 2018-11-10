@@ -19,10 +19,6 @@ const tokenProvider = new GoogleTokenProvider({
 
 app.use(express.static('static'))
 
-app.get('/', (req, res) => {
-  res.sendFile(`${htmlPath}/index.html`)
-})
-
 app.get('/our-work', (req, res) => {
   res.sendFile(`${htmlPath}/our-work.html`)
 })
@@ -31,12 +27,21 @@ app.get('/our-work', (req, res) => {
 //   res.sendFile(`${htmlPath}/${req.params.name}.html`)
 // })
 
-app.get('/what-we-do', (req, res) => {
-  res.sendFile(`${htmlPath}/what-we-do.html`)
-})
+const whatWeDo = ['/web-development', '/organic-seo', '/social-media', '/ppc']
 
 app.get('/what-we-do/:name', (req, res) => {
-  res.sendFile(`${htmlPath}/${req.params.name}.html`)
+  console.log('hey', req.params.name)
+  if (whatWeDo.includes(`/${req.params.name}`)) {
+    console.log('hehe')
+    res.redirect(301, `/${req.params.name}`)
+  }
+
+  res.status(404).send()
+})
+
+app.get(whatWeDo, (req, res) => {
+  console.log(req.path)
+  res.sendFile(`${htmlPath}${req.path}.html`)
 })
 
 app.get('/contacts', (req, res) => {
@@ -124,5 +129,9 @@ app.use('/js', express.static('static/js'))
 app.use('/fonts', express.static('static/assets/fonts'))
 app.use('/favicon', express.static('favicon'))
 app.use(favicon(path.join(__dirname, '/', 'favicon.ico')))
+
+app.get('*', (req, res) => {
+  res.status(404).send()
+})
 
 app.listen(config.port)
