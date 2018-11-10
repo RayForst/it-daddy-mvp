@@ -443,9 +443,9 @@
 }
 
 .d-portfolio {
-  // & > div {
-  //   width: 100%;
-  // }
+  & > div {
+    width: 100%;
+  }
 
   .nk-portfolio-item {
     position: relative;
@@ -925,6 +925,34 @@ select option[disabled] {
   }
 }
 
+$m-footer-h: 830px;
+$t-footer-h: 620px;
+
 .nk-footer {
-  height: 460px;
+  height: $m-footer-h;
+  padding: 0 20px;
+
+  @media #{$m_tablet} {
+    height: $t-footer-h;
+  }
+}
+
+.daddy-bg--bottom {
+  height: $m-footer-h + 100px;
+
+  @media #{$m_tablet} {
+    height: $t-footer-h + 100px;
+  }
+}
+
+@font-face {
+  font-family: "Ionicons";
+  src: url("../assets/fonts/ionicons.eot?v=2.0.1");
+  src: url("../assets/fonts/ionicons.eot?v=2.0.1#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/ionicons.ttf?v=2.0.1") format("truetype"),
+    url("../assets/fonts/ionicons.woff?v=2.0.1") format("woff"),
+    url("../assets/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }

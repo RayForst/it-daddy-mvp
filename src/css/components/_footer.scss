@@ -42,7 +42,7 @@
 
 .d-footer-logo {
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   @media #{$m_tablet} {
     margin-left: 0;
@@ -68,13 +68,22 @@
 .d-footer-address {
   margin-bottom: 0;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   margin-right: -16px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  @media #{$m_tablet} {
+    margin-top: 60px;
+    flex-direction: row;
+  }
 
   @media #{$m_desktop} {
     margin-bottom: 125px;
     margin-right: 0;
+    align-items: flex-start;
+    margin-top: 0;
   }
 
   a {
@@ -89,11 +98,17 @@
     color: #ffffff;
     max-width: 300px;
     display: inline-flex;
-    margin-right: 16px;
     transition: color 0.3s ease;
+    margin-bottom: 10px;
+
+    @media #{$m_tablet} {
+      margin-bottom: 0;
+    }
 
     @media #{$m_desktop} {
       text-align: right;
+      margin-right: 16px;
+      margin-top: 0;
     }
 
     &:hover {
@@ -149,8 +164,16 @@
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: right;
+    text-align: center;
     color: #00e676;
+
+    span {
+      display: block;
+
+      @media #{$m_tablet} {
+        display: inline;
+      }
+    }
   }
 }
 

@@ -2,32 +2,34 @@
     <div class="nk-gap-2"></div>
     <div class="container">
         <div class="row align-items-center">
-         
-                {% if icon is defined %}
-                   <div class="col-md-6 d-custom-bg d-bg{% if imageLeft is not defined %} text-right order-md-2{% endif %}" data-d="10">
-                        <div class="d-custom-bg-viewport daddy-bg-viewport"></div>
-                            <div class="d-image-block__icon text-center">
-                                <img src="assets/images/{{ icon }}">
-                            </div>
-                        <div class="nk-gap d-md-none"></div>
+
+            {% if icon is defined %}
+                <div class="col-md-6 d-custom-bg d-bg{% if imageLeft is not defined %} text-right order-md-2{% endif %}" data-d="10">
+                    <div class="d-custom-bg-viewport daddy-bg-viewport"></div>
+                    <div class="d-image-block__icon text-center">
+                        <img src="assets/images/{{ icon }}">
                     </div>
-                {% else %}
-                    <div class="col-md-6 d-custom-bg d-bg text-center order-md-2" data-d="10">
-                        <div class="d-custom-bg-viewport daddy-bg-viewport"></div>
-                            {% include './_floating-comp.twig' %}
-                        <div class="nk-gap d-md-none"></div>
-                    </div>
-                {% endif %}
-        
+                    <div class="nk-gap d-md-none"></div>
+                </div>
+            {% else %}
+                <div class="col-md-6 d-custom-bg d-bg text-center order-md-2" data-d="10">
+                    <div class="d-custom-bg-viewport daddy-bg-viewport"></div>
+                    {% include './_floating-comp.twig' %}
+                    <div class="nk-gap d-md-none"></div>
+                </div>
+            {% endif %}
+
             <div class="col-md-6{% if imageLeft is defined %} text-left order-md-2{% endif %}">
                 <h2 class="h1 nk-title text-color-main">{{ title }}</h2>
                 <p>
                     {{ text }}
                 </p>
-                <a href="{% if link is defined %}{{ link }}{% else %}/what-we-do{% endif %}" class="d-btn d-btn-border-bot">
-                    {% if linkText is defined %}{{ linkText }}
-                    {% else %}See what we do{% endif %}
-                </a>
+
+                {% if link is defined %}
+                    <a href="{{ link }}" class="d-btn d-btn-border-bot">
+                        {{ linkText }}
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>
