@@ -23,16 +23,10 @@ app.get('/our-work', (req, res) => {
   res.sendFile(`${htmlPath}/our-work.html`)
 })
 
-// app.get('/our-work/:name', (req, res) => {
-//   res.sendFile(`${htmlPath}/${req.params.name}.html`)
-// })
-
 const whatWeDo = ['/web-development', '/organic-seo', '/social-media', '/ppc']
 
 app.get('/what-we-do/:name', (req, res) => {
-  console.log('hey', req.params.name)
   if (whatWeDo.includes(`/${req.params.name}`)) {
-    console.log('hehe')
     res.redirect(301, `/${req.params.name}`)
   }
 
@@ -40,8 +34,20 @@ app.get('/what-we-do/:name', (req, res) => {
 })
 
 app.get(whatWeDo, (req, res) => {
-  console.log(req.path)
+  console.log('test')
   res.sendFile(`${htmlPath}${req.path}.html`)
+})
+
+const organicSeoPages = ['/usability-audit', '/competitors-audit', '/plan-of-action', '/audit-plan']
+
+app.get('/organic-seo/:name', (req, res) => {
+  console.log(req.params.name, organicSeoPages.includes(`/${req.params.name}`))
+  if (organicSeoPages.includes(`/${req.params.name}`)) {
+    console.log('requires', req.params.name, `${htmlPath}${req.params.name}.html`)
+    return res.sendFile(`${htmlPath}${req.params.name}.html`)
+  }
+
+  res.status(404).send()
 })
 
 app.get('/contacts', (req, res) => {
@@ -69,7 +75,6 @@ app.post('/contact', urlencodedParser, (req, res) => {
 
   tokenProvider.getToken((err, token) => {
     // token will be a valid access token.
-    console.log('gett token', token)
 
     if (!err) {
       const transporter = nodemailer.createTransport({
@@ -102,8 +107,6 @@ app.post('/contact', urlencodedParser, (req, res) => {
       <div>Prefered Contact time: ${req.body.contactTime}</div>
     `, // html body
       }
-
-      console.log(req.body)
 
       transporter.sendMail(HelperOptions, (error, info) => {
         if (error) console.log(error)

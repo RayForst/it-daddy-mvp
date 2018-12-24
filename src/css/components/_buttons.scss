@@ -52,6 +52,13 @@
   position: relative;
 }
 
+.d-btn.d-btn-border-bot.d-btn-border-small {
+  font-size: 17px;
+  letter-spacing: -0.4px;
+  color: #00e676;
+  padding: 11px 11px;
+}
+
 .d-btn.d-btn-border-bot::after {
   height: 4px;
   border-radius: 15px;
