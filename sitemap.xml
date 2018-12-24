@@ -1,60 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:xhtml="http://www.w3.org/1999/xhtml"
-      xsi:schemaLocation="
-            http://www.sitemaps.org/schemas/sitemap/0.9
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with PRO Sitemap Service https://pro-sitemaps.com -->
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-  <url>
-       <loc>https://itdaddy.ca/</loc>
-       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
-  </url>
-  <url>
-       <loc>https://itdaddy.ca/our-work</loc>
-       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://itdaddy.ca/web-development</loc>
-       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.9500</priority>
-  </url>
-  <url>
-       <loc>https://itdaddy.ca/organic-seo</loc>
-       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.9500</priority>
-  </url>
-  <url>
-       <loc>https://itdaddy.ca/social-media</loc>
-       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.9500</priority>
-  </url>
-  <url>
-       <loc>https://itdaddy.ca/ppc</loc>
-       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.9500</priority>
-  </url>
-  <url>
-       <loc>https://itdaddy.ca/about</loc>
-       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://itdaddy.ca/contacts</loc>
-       <lastmod>2018-11-10T11:35:49+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
+
+<url>
+  <loc>https://itdaddy.ca/</loc>
+  <lastmod>2018-12-24T10:17:37+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/our-work</loc>
+  <lastmod>2018-12-24T10:17:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/web-development</loc>
+  <lastmod>2018-12-24T10:17:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/organic-seo</loc>
+  <lastmod>2018-12-24T10:17:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/social-media</loc>
+  <lastmod>2018-12-24T10:17:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/ppc</loc>
+  <lastmod>2018-12-24T10:17:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/about</loc>
+  <lastmod>2018-12-24T10:17:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/contacts</loc>
+  <lastmod>2018-12-24T10:17:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/organic-seo/audit-plan</loc>
+  <lastmod>2018-12-24T10:17:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/organic-seo/usability-audit</loc>
+  <lastmod>2018-12-24T10:17:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/organic-seo/competitors-audit</loc>
+  <lastmod>2018-12-24T10:17:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://itdaddy.ca/organic-seo/plan-of-action</loc>
+  <lastmod>2018-12-24T10:17:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
