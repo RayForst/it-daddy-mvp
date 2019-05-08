@@ -49,6 +49,7 @@
     "jquery-bridget": "^2.0.1",
     "multipipe": "^2.0.1",
     "nodemailer": "^4.6.8",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "normalize-scss": "^7.0.1",
     "popper.js": "^1.14.4",
     "refresh-token": "^1.0.0",
